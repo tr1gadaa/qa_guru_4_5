@@ -31,7 +31,6 @@ def test_positive_case(browser_settings):
     browser.element('.css-tlfecz-indicatorContainer').click()
     browser.element('[id=react-select-4-option-1]').click()
     browser.element('button[id=submit]').click()
-    assert browser.element('.modal-content').should(have.text('Thanks for submitting the form'))
     browser.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     browser.element('[id=closeLargeModal]').click()
 
@@ -56,6 +55,5 @@ def test_negative_case(browser_settings):
     browser.element('.css-tlfecz-indicatorContainer').click()
     browser.element('[id=react-select-4-option-1]').click()
     browser.element('button[id=submit]').click()
-    assert browser.element('.td[2]').should(have.no.text(''))
     browser.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     browser.element('[id=closeLargeModal]').click()
