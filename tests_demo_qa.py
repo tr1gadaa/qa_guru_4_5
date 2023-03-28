@@ -1,6 +1,7 @@
 import pytest
 from selene import be, have
 from selene.support.shared import browser
+import os
 
 
 def test_positive_case(browser_settings):
